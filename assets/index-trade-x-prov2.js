@@ -12769,7 +12769,7 @@ function AuthAdmin() {
         _e("/admin/dashboard")
     }
       , lt = axios.create({
-        baseURL: "https://aaaa.trade-x-pro.com/api/",
+        baseURL: "https://vimefy.com/api-trade-x-pro/api/",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${rt}`
@@ -13001,7 +13001,7 @@ function AdminCategory() {
                             }), jsxRuntimeExports.jsx("td", {
                                 children: jsxRuntimeExports.jsx("img", {
                                     className: "rounded-lg w-[45px] h-[45px] hue-rotate-[-30deg]",
-                                    src: "https://aaaa.trade-x-pro.com/api//" + mt + "/" + Dt.image,
+                                    src: "https://vimefy.com/api-trade-x-pro/api/" + mt + "/" + Dt.image,
                                     alt: ""
                                 })
                             }), jsxRuntimeExports.jsx("td", {
@@ -13297,7 +13297,7 @@ function AdminCoins() {
                                     className: "flex items-center gap-2",
                                     children: [jsxRuntimeExports.jsx("img", {
                                         className: "rounded-[50%] w-[40px] h-[40px]",
-                                        src: "https://aaaa.trade-x-pro.com/api//" + kt + "/" + Rt.image,
+                                        src: "https://vimefy.com/api-trade-x-pro/api/" + kt + "/" + Rt.image,
                                         alt: ""
                                     }), Rt.name]
                                 })
@@ -13946,7 +13946,7 @@ function AuthUser() {
         nt(ut)
     }
       , ct = axios.create({
-        baseURL: "https://aaaa.trade-x-pro.com/api/",
+        baseURL: "https://vimefy.com/api-trade-x-pro/api/",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${rt}`
@@ -14331,7 +14331,7 @@ function AdminProduct() {
                             }), jsxRuntimeExports.jsx("td", {
                                 children: jsxRuntimeExports.jsx("img", {
                                     className: "rounded-lg w-[45px] h-[45px] ",
-                                    src: "https://aaaa.trade-x-pro.com/api//" + Dt + "/" + It.image,
+                                    src: "https://vimefy.com/api-trade-x-pro/api/" + Dt + "/" + It.image,
                                     alt: ""
                                 })
                             }), jsxRuntimeExports.jsx("td", {
@@ -17842,7 +17842,7 @@ function Categories() {
                         className: "grayscale group-hover:grayscale-0 duration-300",
                         children: jsxRuntimeExports.jsx("img", {
                             className: "w-[45px] md:w-[70px] h-[45px] md:h-[70px] hue-rotate-[-30deg]",
-                            src: "https://aaaa.trade-x-pro.com/api//" + it + "/" + at.image,
+                            src: "https://vimefy.com/api-trade-x-pro/api/" + it + "/" + at.image,
                             alt: ""
                         })
                     }), jsxRuntimeExports.jsx("p", {
