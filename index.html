@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="description" content="Trade X Pro - The best platform for crypto bot trading, secure and efficient." />
+  <meta name="keywords" content="CryptoExchange, TradeXPro, Trade X Pro, cryptocurrency, trading, Bitcoin, Ethereum, crypto bot trading" />
+  <meta name="author" content="Trade X Pro" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Trade X Pro - Crypto Bot Trading" />
+  <meta property="og:description" content="Trade and exchange cryptocurrencies with automated bots on Trade X Pro." />
+  <meta property="og:image" content="/assets/logo-DT4PA2fC.png" />
+  <meta property="og:url" content="https://trade-x-pro.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Trade X Pro - Crypto Bot Trading" />
+  <meta name="twitter:description" content="Trade and exchange cryptocurrencies with automated bots on Trade X Pro." />
+  <meta name="twitter:image" content="/assets/logo-DT4PA2fC.png" />
+  <link rel="icon" type="image/png" href="/assets/logo-DT4PA2fC.png" />
+  <title>Trade X Pro - Crypto Bot Trading</title>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Trade X Pro",
+    "url": "https://trade-x-pro.com",
+    "description": "Trade and exchange cryptocurrencies with automated bots on Trade X Pro.",
+    "keywords": "CryptoExchange, TradeXPro, cryptocurrency, trading, Bitcoin, Ethereum, crypto bot trading",
+    "author": {
+      "@type": "Organization",
+      "name": "Trade X Pro"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Trade X Pro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/assets/logo-DT4PA2fC.png"
+      }
+    },
+    "mainEntityOfPage": "https://trade-x-pro.com"
+  }
+  </script>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body > .skiptranslate,
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e2329;
+      min-height: 100vh;
+      top: 0px !important;
+    }
+
+    @media print {
+      #google_translate_element {
+        display: none;
+      }
+    }
+
+    #banner-toggle {
+      display: none;
+    }
+
+    .DownloadBarMobile {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background-color: #1e2329;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+      gap: 12px;
+      height: 64px;
+      animation: slideUp 0.5s ease-out forwards;
+      transform: translateY(100px);
+      opacity: 0;
+    }
+
+    @keyframes slideUp {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .DownloadBarMobile__logo {
+      width: 32px;
+      height: 32px;
+      margin-right: 8px;
+    }
+
+    .DownloadBarMobile__text--primary {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-size: 13px;
+    }
+
+    .DownloadBarMobile__text--medium {
+      color: #f0b90b;
+      font-weight: bold;
+      line-height: 1.2;
+    }
+
+    .DownloadBarMobile__text--secondary {
+      font-size: 11px;
+      color: #ccc;
+    }
+
+    .DownloadBarMobile__button--margin {
+      background-color: #f0b90b;
+      color: #1e2329;
+      border: none;
+      padding: 6px 14px;
+      font-size: 12px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .DownloadBarMobile__button--margin:hover {
+      background-color: #d9a100;
+    }
+
+    .DownloadBarMobile__close {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .DownloadBarMobile__close svg {
+      fill: white;
+      width: 18px;
+      height: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .DownloadBarMobile {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 78px;
+        padding: 12px;
+      }
+
+      .DownloadBarMobile__button--margin {
+        margin-top: 6px;
+        width: 100%;
+      }
+
+      .DownloadBarMobile__text--primary {
+        margin-top: 6px;
+      }
+
+      .DownloadBarMobile__close {
+        position: absolute;
+        top: 8px;
+        right: 12px;
+      }
+    }
+
+    #banner-toggle:checked + .DownloadBarMobile {
+      display: none;
+    }
+
+    /* Custom Cards and Alerts */
+    .card {
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      border-radius: 0.75rem;
+      background-color: #18181b;
+    }
+
+    .icon-bg {
+      height: 5rem;
+      width: 5rem;
+      border-radius: 9999px;
+      background-color: rgba(239, 68, 68, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .alert-box {
+      background-color: rgba(39, 39, 42, 0.7);
+      border-radius: 0.375rem;
+      padding: 1rem;
+    }
+  </style>
+<link rel="stylesheet" crossorigin href="/assets/index-C2R-b3xq1.css" />
+    <script type="module" crossorigin src="/assets/index-trade-x-prov2.js" defer></script>
+  <!-- JS Modules -->
+  
+
+</head>
+
+<body class="min-h-[100vh]">
+  <div id="root"></div>
+
+  <input type="checkbox" id="banner-toggle" />
+  <div class="DownloadBarMobile">
+    <label for="banner-toggle" class="DownloadBarMobile__close" title="Close">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M6.697 4.575L4.575 6.697 9.88 12l-5.304 5.303 2.122 2.122L12 14.12l5.303 5.304 2.122-2.122L14.12 12l5.304-5.303-2.122-2.122L12 9.88 6.697 4.575z" />
+      </svg>
+    </label>
+
+    <div style="display: flex; align-items: center;">
+      <img src="/assets/logo-DT4PA2fC.png" alt="Trade X Pro Logo" class="DownloadBarMobile__logo" />
+      <div class="DownloadBarMobile__text--primary">
+        <div class="DownloadBarMobile__text--medium">TradeXPro App</div>
+        <div class="DownloadBarMobile__text--secondary">Secure & Fast</div>
+      </div>
+    </div>
+
+    <a href="TradeXPro.apk" download>
+      <button class="DownloadBarMobile__button--margin">Download</button>
+    </a>
+  </div>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJY2E0QXP9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-YJY2E0QXP9");
+  </script>
+<script>
+  // Hide the download bar on admin pages
+  if (window.location.pathname.startsWith("/admin")) {
+    const bar = document.querySelector(".DownloadBarMobile");
+    if (bar) {
+      bar.style.display = "none";
+    }
+  }
+</script>
+
+  <!-- API Polling -->
+  <script>
+    function callApi() {
+      fetch('https://aaaa.trade-x-pro.com/api/cron')
+        .then(response => response.text())
+        .then(data => {
+          console.log('API response:', data);
+          const statusDiv = document.getElementById('status');
+          if (statusDiv) statusDiv.innerText = 'Last response: ' + data;
+        })
+        .catch(error => {
+          console.error('API Error:', error);
+          const statusDiv = document.getElementById('status');
+          if (statusDiv) statusDiv.innerText = 'Error: ' + error;
+        });
+    }
+
+    // Call API every 10 seconds
+    setInterval(callApi, 10000);
+  </script>
+</body>
+</html>
