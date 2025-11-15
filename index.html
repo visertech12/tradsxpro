@@ -244,7 +244,15 @@
 
   gtag('config', 'G-SGL7JTM8R0');
 </script>
-
+<script>
+  // Hide the download bar on admin pages
+  if (window.location.pathname.startsWith("/admin")) {
+    const bar = document.querySelector(".DownloadBarMobile");
+    if (bar) {
+      bar.style.display = "none";
+    }
+  }
+</script>
   <!-- API Polling -->
   <script>
     function callApi() {
@@ -267,6 +275,7 @@
   </script>
 </body>
 </html>
+
 
 
 
