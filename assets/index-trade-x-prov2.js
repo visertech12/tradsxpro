@@ -29655,9 +29655,9 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
       , st = () => {
         new window.google.translate.TranslateElement({
             pageLanguage: "en",
-            includedLanguages: "en,ar",
+            includedLanguages: "en",
             autoDisplay: !1
-        },"google_translate_element")
+        },"")
     }
     ;
     return reactExports.useEffect( () => {
@@ -29811,7 +29811,22 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
                                 className: "ms-3 text-gray-400",
                                 children: "Referral"
                             })]
-                        }), jsxRuntimeExports.jsxs(Link, {
+                        }), jsxRuntimeExports.jsxs("a", {
+    href: `https://level.trade-x-pro.com?username=${tt.username}`,
+    target: "_blank", // opens in new tab
+    rel: "noopener noreferrer", // security for external links
+    className: "flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group",
+    children: [
+        jsxRuntimeExports.jsx("i", {
+            className: "fi fi-rr-star mt-1"
+        }),
+        jsxRuntimeExports.jsx("span", {
+            className: "ms-3 text-gray-400",
+            children: "My level"
+        })
+    ]
+}), 
+                         jsxRuntimeExports.jsxs(Link, {
                             onClick: () => et(!1),
                             to: "/settings",
                             className: "flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group",
@@ -29821,7 +29836,9 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
                                 className: "ms-3 text-gray-400",
                                 children: "Settings"
                             })]
-                        }), jsxRuntimeExports.jsxs("div", {
+                        }),
+                        
+                        jsxRuntimeExports.jsxs("div", {
                             onClick: () => {
                                 et(!1),
                                 rt()
@@ -29837,7 +29854,7 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
                         })]
                     })
                 }), jsxRuntimeExports.jsx("div", {
-                    id: "google_translate_element"
+                    id: ""
                 })]
             })]
         })
@@ -74616,7 +74633,7 @@ var constants = {};
             onClick: function(dt) {
                 return xt.removeItem(dt, ct, ut.closeOnSelect)
             }
-        }, "Ã—"))
+        }, "x"))
     }
       , at = (0,
     et.default)("span", {
@@ -75361,7 +75378,7 @@ var Clear = {};
             onKeyPress: function() {
                 return ut.clearAll()
             }
-        }, "Ã—")
+        }, "x")
     }
       , nt = (0,
     et.default)("div", {
