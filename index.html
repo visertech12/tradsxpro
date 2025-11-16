@@ -289,9 +289,28 @@
     }
   });
 </script>
+<script>
+  // Function to detect if user is inside your Android app
+  function isInApp() {
+    // Detect by custom WebView property or user agent
+    // For example, you can set userAgent in your Android WebView to include 'TradeXProApp'
+    return typeof window.AndroidApp !== 'undefined' || /TradeXProApp/i.test(navigator.userAgent);
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    if (isInApp()) {
+      // Hide top nav / close button inside the app
+      const closeBtn = document.querySelector(".DownloadBarMobile__close");
+      const topNav = document.querySelector("header"); // adjust selector for your top nav
+      if (closeBtn) closeBtn.style.display = "none";
+      if (topNav) topNav.style.display = "none";
+    }
+  });
+</script>
 
 </body>
 </html>
+
 
 
 
