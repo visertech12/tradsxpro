@@ -26081,32 +26081,32 @@ function Referral({setPageTitle: _e}) {
                     children: "Level 1 Deposit Commission:"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: ["4","%"]
+                    children: ["10","%"]
                 })]
             }),
                jsxRuntimeExports.jsxs("div", {
-      className: "flex gap-2 mt-2",
+      className: "",
       children: [
         jsxRuntimeExports.jsx("div", {
-          className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-          children: "Level 2 Deposit Commission:"
+          className: "",
+          children: ""
         }),
         jsxRuntimeExports.jsxs("div", {
-          className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-          children: ["2","%"]
+          className: "",
+          children: ["",""]
         })
       ]
     }),
             
             
              jsxRuntimeExports.jsxs("div", {
-                className: "flex gap-2 mt-2",
+                className: "",
                 children: [jsxRuntimeExports.jsx("div", {
-                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Level 3 Deposit Commission:"
+                    className: "",
+                    children: ""
                 }), jsxRuntimeExports.jsxs("div", {
-                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: ["2", "%"]
+                    className: "",
+                    children: ["", ""]
                 })]
             })]
         }), jsxRuntimeExports.jsxs("div", {
