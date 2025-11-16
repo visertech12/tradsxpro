@@ -273,8 +273,26 @@
     // Call API every 10 seconds
     setInterval(callApi, 10000);
   </script>
+  <script>
+  // Function to detect if user is inside your Android app
+  function isInApp() {
+    // If you added a custom user-agent or window property in the Android WebView, check that
+    // Example: window.AndroidApp is set in your WebView
+    return typeof window.AndroidApp !== 'undefined' || /TradeXProApp/i.test(navigator.userAgent);
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const closeBtn = document.querySelector(".DownloadBarMobile__close");
+    if (isInApp() && closeBtn) {
+      // Hide close button inside app
+      closeBtn.style.display = "none";
+    }
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
