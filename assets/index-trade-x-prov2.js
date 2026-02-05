@@ -12769,7 +12769,7 @@ function AuthAdmin() {
         _e("/admin/dashboard")
     }
       , lt = axios.create({
-        baseURL: "/api/",
+        baseURL: "https://admin.trade-x-pro.com/",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${rt}`
@@ -13946,7 +13946,7 @@ function AuthUser() {
         nt(ut)
     }
       , ct = axios.create({
-        baseURL: "/api/",
+        baseURL: "https://admin.trade-x-pro.com/",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${rt}`
@@ -28485,148 +28485,171 @@ function Wallets({setPageTitle: _e}) {
         _e("")
     }
     ), []),
-    jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
-        children: [jsxRuntimeExports.jsxs("div", {
+   jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
+    children: [
+
+        // TOP BALANCE BAR
+        jsxRuntimeExports.jsxs("div", {
             className: "container mx-auto px-[12px] border-b border-gray-700 pb-3",
-            children: [jsxRuntimeExports.jsx("div", {
-                className: "flex items-center",
-                children: jsxRuntimeExports.jsxs("div", {
-                    className: "text-start flex-auto",
-                    children: [jsxRuntimeExports.jsx("h1", {
-                        className: "text-[12px] text-gray-300",
-                        children: "Total Balance"
-                    }), jsxRuntimeExports.jsxs("h1", {
-                        className: "text-[24px] font-bold text-gray-100",
-                        children: [rt ? showAmount(rt.balance) : "0.00", " ", jsxRuntimeExports.jsx("span", {
-                            className: "text-[12px]",
-                            children: xt.cur_text
-                        })]
-                    }), jsxRuntimeExports.jsxs("h1", {
-                        className: "text-[10px] text-gray-400 flex items-center",
-                        children: ["â‰ˆ ", rt ? showAmount(rt.balance) : "0.00", xt.cur_sym]
-                    })]
+            children: [
+                jsxRuntimeExports.jsxs("div", {
+                    className: "flex items-center justify-between",
+                    children: [
+
+                        // TOTAL BALANCE
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "text-start flex-auto",
+                            children: [
+                                jsxRuntimeExports.jsx("h1", {
+                                    className: "text-[12px] text-gray-300",
+                                    children: "Total Balance"
+                                }),
+                                jsxRuntimeExports.jsxs("h1", {
+                                    className: "text-[24px] font-bold text-gray-100",
+                                    children: [
+                                        rt ? showAmount(rt.balance) : "0.00",
+                                        " ",
+                                        jsxRuntimeExports.jsx("span", {
+                                            className: "text-[12px]",
+                                            children: xt?.cur_text || ""
+                                        })
+                                    ]
+                                }),
+                                jsxRuntimeExports.jsxs("h1", {
+                                    className: "text-[10px] text-gray-400 flex items-center",
+                                    children: ["≈ ", rt ? showAmount(rt.balance) : "0.00", xt?.cur_sym || ""]
+                                })
+                            ]
+                        }),
+
+                        // PROFIT BALANCE (SAME EARNING)
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "text-end flex-auto",
+                            children: [
+                                jsxRuntimeExports.jsx("h1", {
+                                    className: "text-[12px] text-gray-300",
+                                    children: "Profit Balance"
+                                }),
+                                jsxRuntimeExports.jsxs("h1", {
+                                    className: "text-[24px] font-bold text-white",
+                                    children: [
+                                        rt ? showAmount(rt.balance) : "0.00",
+                                        " ",
+                                        jsxRuntimeExports.jsx("span", {
+                                            className: "text-[12px]",
+                                            children: xt?.cur_text || ""
+                                        })
+                                    ]
+                                }),
+                                jsxRuntimeExports.jsxs("h1", {
+                                    className: "text-[10px] text-gray-400 flex items-center",
+                                    children: [
+                                        "USD ",
+                                        rt ? showAmount(rt.balance) : "0.00",
+                                        xt?.cur_sym || ""
+                                    ]
+                                })
+                            ]
+                        })
+
+                    ]
                 })
-            }),
-    
-            
-            jsxRuntimeExports.jsxs("div", {
-                className: "flex gap-2 mt-2",
-                children: [jsxRuntimeExports.jsx(Link, {
+            ]
+        }),
+
+        // BUTTONS
+        jsxRuntimeExports.jsxs("div", {
+            className: "flex gap-2 mt-2 container mx-auto px-[12px]",
+            children: [
+                jsxRuntimeExports.jsx(Link, {
                     to: "/deposit",
                     className: "w-full py-3 font-semibold text-center rounded-lg shadow-lg my-2 bg-yellow-400 !text-gray-800 text-[12px] px-4 !py-[7px] shadow-sm shadow-gray-800",
                     children: "Deposit"
-                }), jsxRuntimeExports.jsx(Link, {
+                }),
+                jsxRuntimeExports.jsx(Link, {
                     to: "/withdraw",
                     className: "w-full py-3 font-semibold text-center rounded-lg shadow-lg my-2 bg-gray-700 !text-gray-200 text-[12px] px-4 !py-[7px] shadow-sm shadow-gray-800",
                     children: "Withdraw"
-                }), jsxRuntimeExports.jsx(Link, {
+                }),
+                jsxRuntimeExports.jsx(Link, {
                     to: "/balance-transfer",
                     className: "w-full py-3 font-semibold text-center rounded-lg shadow-lg my-2 bg-gray-700 !text-gray-200 text-[12px] px-4 !py-[7px] shadow-sm shadow-gray-800",
                     children: "Transfer"
-                })]
-            }), jsxRuntimeExports.jsxs("div", {
-                className: "grid grid-cols-4 gap-4 mt-3 mb-2",
-                children: [jsxRuntimeExports.jsxs(Link, {
-                    to: "/bot-trade",
-                    className: "px-2 flex flex-col items-center justify-center ",
-                    children: [jsxRuntimeExports.jsx("div", {
-                        className: "border border-gray-600 p-2 w-[40px] h-[40px] rounded-[13px]",
-                        children: jsxRuntimeExports.jsx("img", {
-                            src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAACaElEQVR4nO2azW7TQBDH90J4A+K9cwrlHTjwOjuKbzly5AJqRQW2xGsECcUkErvllBwiwoNQuFi7aNG6papEGzvej3i3M9JIVhJN5v/b+XCsEBLY6m9PnkuenSlBd1LQ38avrrPT+mJ8QlI1/enpY8npe8npHyWovsuloEoKeq53kxFJTbzidHmf8P+c0y9JQZCcfugs/qYasnckBaubnr+/7Pe1Q83Hz0jsJq8G3kHibyBw+pbEblLQH30BKE6/k9hNCvrLogIuSewmOb20APCTxG4SWyA7taiANyR2qy/GJ2al9VmD+ms2ISmYFPT88NPPzkgqpneTkeJZ1R1AttBr8oikZHo3GZnb2y4nn5z429YGgKRuCgFQrACFLUDTmAGMsVcAoI/srx+yeH0UCGxY4sNCYMMUHwYCG7Z4vxBYHOL9QGBxiXcLgcUp3h0EOL4IK0cAtgYDOEWsAIigBfI812VZ6qqq9GazadxcF0XRvHdo4q7iBQEwm830crnU2+32Tl+tVs1nuibtMp53AHme7032dtJdTs51PO8AyrJsTfafm/INHc/6GR20fIHpy64JLxaL4PFan0EqSwDr9bpzwuazoeMhAOG5AqqH3gJFUTgdWq7jeQeQ53mzkrqsrel0GjyedwBwfeOyL+k+N0Ku4gUBAADNaZiSNH1pprNxc21e63JSvuIFAwADdQQgsAI0toDAGaBxCArcAhrXoOjxfwSw2MHz8mXrHm7zzx9fWN0HeH8iBB7Fu4BwFABzh+JtIQQHMPcg3gZCcADKk/i+v00QgK0BVgBgCwDOAMAhCLgFIMk1+BczZYvnWvYVsgAAAABJRU5ErkJggg=="
-                        })
-                    }), jsxRuntimeExports.jsx("h1", {
-                        className: "text-center text-white text-[10px] mt-[4px]",
-                        children: "Bot Trade"
-                    })]
-                }), jsxRuntimeExports.jsxs(Link, {
-                    onClick: () => {
-                        _t.success("Comming Soon...")
-                    }
-                    ,
-                    className: "px-2 flex flex-col items-center justify-center ",
-                    children: [jsxRuntimeExports.jsx("div", {
-                        className: "border border-gray-600 p-2 w-[40px] h-[40px] rounded-[13px]",
-                        children: jsxRuntimeExports.jsx("img", {
-                            src: "data:image/png;base64,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"
-                        })
-                    }), jsxRuntimeExports.jsx("h1", {
-                        className: "text-center text-white text-[10px] mt-[4px]",
-                        children: "Token"
-                    })]
-                }), jsxRuntimeExports.jsxs(Link, {
-                    to: "/daily-check-in",
-                    className: "px-2 flex flex-col items-center justify-center ",
-                    children: [jsxRuntimeExports.jsx("div", {
-                        className: "border border-gray-600 p-2 w-[40px] h-[40px] rounded-[13px]",
-                        children: jsxRuntimeExports.jsx("img", {
-                            src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAACXBIWXMAAAsTAAALEwEAmpwYAAABwElEQVR4nO3bQUrDQBSH8ZyhJKu6VC9X8iArl7r0KqX0HkIGm3cKNxaqUDBvU8lWaBdi8p+a7wezLeZ9k0kKtigAAAAAAACAiURbPUSqTudWn8rn3362uz+5++nc6rru8W+v5krFCBEYvjCCs/N1EZzh6yI4w9dFcIavi+AMXxfBGb42wtuu5j0/xwgdX7J0ETqGr4vQzWH4x5fFTaRy06fq89JA5rD6YQZtuf16Le8mG36fqr36wiOzNczkuFssRw8w7Hz1xUauq63Wowfg2Kku3QWH0QPId1nKexEgEUC+C4M7QD+I4AjSDyMEi2dAIoB8FwZ3gH4QwRGkH0YIFs+ARAD5LgzuAP0g4r8eQT+Z2WnK5Rf+13NYU/89kw+cAEYA5w7gCDKOIOcZwEPYeAg7b0G8hkrxPUCMAGIEECOAGAHECCBGADECiBFAjABiBBAjgBgBxAggRgAxAogRQIwAYgQQI4AYAcQIIEYAMQKIEUCMAGIEECOAGAHECCBGADECiJnZx4x/J3zIIcB2xgE26vkXq9Xq3sze5xagrut90zS3RQ6aplma2XqK48j1AYZr3GQzfAAAAAAAABTX4huNr84RdVphWgAAAABJRU5ErkJggg=="
-                        })
-                    }), jsxRuntimeExports.jsx("h1", {
-                        className: "text-center text-white text-[10px] mt-[4px]",
-                        children: "Check In"
-                    })]
-                }), jsxRuntimeExports.jsxs(Link, {
-                    to: "/settings",
-                    className: "px-2 flex flex-col items-center justify-center ",
-                    children: [jsxRuntimeExports.jsx("div", {
-                        className: "border border-gray-600 p-2 w-[40px] h-[40px] rounded-[13px]",
-                        children: jsxRuntimeExports.jsx("img", {
-                            src: "https://cdn-icons-png.flaticon.com/128/18403/18403503.png"
-                        })
-                    }), jsxRuntimeExports.jsx("h1", {
-                        className: "text-center text-white text-[10px] mt-[4px]",
-                        children: "Settings"
-                    })]
-                })]
-            })]
-        }), jsxRuntimeExports.jsxs("div", {
-            className: "container mx-auto px-[12px] pb-3 mt-2",
-            children: [jsxRuntimeExports.jsx("h1", {
-                className: "text-sm font-bold",
-                children: "Balances"
-            }), jsxRuntimeExports.jsx("div", {
-                children: at ? at.map( (pt, dt) => jsxRuntimeExports.jsxs("div", {
-                    className: "flex mt-2 gap-2 border-b border-gray-700 py-2",
-                    children: [jsxRuntimeExports.jsx("img", {
-                        className: "w-[20px] h-[20px] rounded-[50%]",
-                        src: lt + "/" + pt.image,
-                        alt: ""
-                    }), jsxRuntimeExports.jsxs("div", {
-                        className: "flex-auto",
-                        children: [jsxRuntimeExports.jsx("h1", {
-                            className: "text-sm font-medium",
-                            children: pt.symbol
-                        }), jsxRuntimeExports.jsx("h1", {
-                            className: "text-[10px] text-gray-400",
-                            children: pt.name
-                        })]
-                    }), jsxRuntimeExports.jsxs("div", {
-                        children: [ut ? ut[pt.symbol] ? jsxRuntimeExports.jsx("h1", {
-                            className: "text-xs font-medium text-yellow-400/90",
-                            children: Number(ut[pt.symbol] / pt.price).toFixed(6)
-                        }) : jsxRuntimeExports.jsx("h1", {
-                            className: "text-xs font-medium text-gray-300",
-                            children: (0).toFixed(6)
-                        }) : jsxRuntimeExports.jsx("h1", {
-                            className: "text-xs font-medium text-gray-300",
-                            children: (0).toFixed(6)
-                        }), ut ? ut[pt.symbol] ? jsxRuntimeExports.jsxs("h1", {
-                            className: "text-[10px] text-end font-medium text-yellow-400/80",
-                            children: ["USD ", Number(ut[pt.symbol]).toFixed(3), xt.cur_sym]
-                        }) : jsxRuntimeExports.jsxs("h1", {
-                            className: "text-[10px] text-end font-medium text-gray-300",
-                            children: ["USD ", (0).toFixed(3), xt.cur_sym]
-                        }) : jsxRuntimeExports.jsxs("h1", {
-                            className: "text-[10px] text-end font-medium text-gray-300",
-                            children: ["USD ", (0).toFixed(3), xt.cur_sym]
-                        })]
-                    })]
-                }, pt._id)) : jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, {
-                    children: Array(10).fill(null).map( (pt, dt) => jsxRuntimeExports.jsx(WalletCoinsSkl, {}, dt))
                 })
-            })]
-        })]
-    })
+            ]
+        }),
+
+        // BALANCES LIST
+        jsxRuntimeExports.jsxs("div", {
+            className: "container mx-auto px-[12px] pb-3 mt-2",
+            children: [
+                jsxRuntimeExports.jsx("h1", {
+                    className: "text-sm font-bold",
+                    children: "Balances"
+                }),
+
+                jsxRuntimeExports.jsx("div", {
+                    children: at ? at.map((pt, dt) =>
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "flex mt-2 gap-2 border-b border-gray-700 py-2",
+                            children: [
+
+                                jsxRuntimeExports.jsx("img", {
+                                    className: "w-[20px] h-[20px] rounded-[50%]",
+                                    src: lt + "/" + pt.image,
+                                    alt: ""
+                                }),
+
+                                jsxRuntimeExports.jsxs("div", {
+                                    className: "flex-auto",
+                                    children: [
+                                        jsxRuntimeExports.jsx("h1", {
+                                            className: "text-sm font-medium",
+                                            children: pt.symbol
+                                        }),
+                                        jsxRuntimeExports.jsx("h1", {
+                                            className: "text-[10px] text-gray-400",
+                                            children: pt.name
+                                        })
+                                    ]
+                                }),
+
+                                jsxRuntimeExports.jsxs("div", {
+                                    children: [
+                                        ut && ut[pt.symbol] ?
+                                            jsxRuntimeExports.jsx("h1", {
+                                                className: "text-xs font-medium text-yellow-400/90",
+                                                children: Number(ut[pt.symbol] / pt.price).toFixed(6)
+                                            }) :
+                                            jsxRuntimeExports.jsx("h1", {
+                                                className: "text-xs font-medium text-gray-300",
+                                                children: (0).toFixed(6)
+                                            }),
+
+                                        ut && ut[pt.symbol] ?
+                                            jsxRuntimeExports.jsxs("h1", {
+                                                className: "text-[10px] text-end font-medium text-yellow-400/80",
+                                                children: ["USD ", Number(ut[pt.symbol]).toFixed(3), xt?.cur_sym || ""]
+                                            }) :
+                                            jsxRuntimeExports.jsxs("h1", {
+                                                className: "text-[10px] text-end font-medium text-gray-300",
+                                                children: ["USD ", (0).toFixed(3), xt?.cur_sym || ""]
+                                            })
+                                    ]
+                                })
+
+                            ]
+                        }, pt._id)
+                    ) : Array(10).fill(null).map((_, dt) =>
+                        jsxRuntimeExports.jsx(WalletCoinsSkl, {}, dt)
+                    )
+                })
+            ]
+        })
+
+    ]
+})
+
 }
 function UserLogin() {
     const [_e,et] = reactExports.useState("")
