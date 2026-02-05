@@ -28677,7 +28677,7 @@ function Wallets({setPageTitle: _e}) {
             ]
         })
 
-    ]
+    
 })
 
 }
