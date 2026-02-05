@@ -74461,7 +74461,7 @@ var constants = {};
             onClick: function(dt) {
                 return xt.removeItem(dt, ct, ut.closeOnSelect)
             }
-        }, "Ã—"))
+        }, "x"))
     }
       , at = (0,
     et.default)("span", {
@@ -75206,7 +75206,7 @@ var Clear = {};
             onKeyPress: function() {
                 return ut.clearAll()
             }
-        }, "Ã—")
+        }, "x")
     }
       , nt = (0,
     et.default)("div", {
