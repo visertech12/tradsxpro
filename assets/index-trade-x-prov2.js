@@ -28486,41 +28486,28 @@ function Wallets({setPageTitle: _e}) {
     }
     ), []),
     jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
-        children: [jsxRuntimeExports.jsx("div", {
-                        className: "flex items-center justify-between", // Aligns items in a row
-                        children: [
-                            // Main Balance (Left)
-                            jsxRuntimeExports.jsxs("div", {
-                                className: "text-start",
-                                children: [
-                                    jsxRuntimeExports.jsx("h1", {
-                                        className: "text-[12px] text-gray-300",
-                                        children: "Main Balance"
-                                    }),
-                                    jsxRuntimeExports.jsxs("h1", {
-                                        className: "text-[24px] font-bold text-gray-100",
-                                        children: [
-                                            rt ? showAmount(rt.balance) : "0.00",
-                                            " ",
-                                            jsxRuntimeExports.jsx("span", {
-                                                className: "text-[12px]",
-                                                children: xt?.cur_text || ""
-                                            })
-                                        ]
-                                    }),
-                                    jsxRuntimeExports.jsxs("h1", {
-                                        className: "text-[10px] text-gray-400 flex items-center",
-                                        children: [
-                                            "USD ",
-                                            rt ? showAmount(rt.balance) : "0.00",
-                                            xt?.cur_sym || ""
-                                        ]
-                                    })
-                                ]
-                            }),
-                            
-                                                        
-                            jsxRuntimeExports.jsxs("div", {
+        children: [jsxRuntimeExports.jsxs("div", {
+            className: "container mx-auto px-[12px] border-b border-gray-700 pb-3",
+            children: [jsxRuntimeExports.jsx("div", {
+                className: "flex items-center",
+                children: jsxRuntimeExports.jsxs("div", {
+                    className: "text-start flex-auto",
+                    children: [jsxRuntimeExports.jsx("h1", {
+                        className: "text-[12px] text-gray-300",
+                        children: "Total Balance"
+                    }), jsxRuntimeExports.jsxs("h1", {
+                        className: "text-[24px] font-bold text-gray-100",
+                        children: [rt ? showAmount(rt.balance) : "0.00", " ", jsxRuntimeExports.jsx("span", {
+                            className: "text-[12px]",
+                            children: xt.cur_text
+                        })]
+                    }), jsxRuntimeExports.jsxs("h1", {
+                        className: "text-[10px] text-gray-400 flex items-center",
+                        children: ["â‰ˆ ", rt ? showAmount(rt.balance) : "0.00", xt.cur_sym]
+                    })]
+                })
+            }),
+      jsxRuntimeExports.jsxs("div", {
                                 className: "text-end",
                                 children: [
                                     jsxRuntimeExports.jsx("h1", {
