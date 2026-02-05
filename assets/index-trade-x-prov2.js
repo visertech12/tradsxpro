@@ -28485,7 +28485,7 @@ function Wallets({setPageTitle: _e}) {
         _e("")
     }
     ), []),
-jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
+  jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
     children: [
 
         // TOP BALANCE BAR
