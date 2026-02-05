@@ -12769,7 +12769,7 @@ function AuthAdmin() {
         _e("/admin/dashboard")
     }
       , lt = axios.create({
-        baseURL: "https://vimefy.com/api-trade-x-pro/api/",
+        baseURL: "https://admin.trade-x-pro.com/",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${rt}`
@@ -13001,7 +13001,7 @@ function AdminCategory() {
                             }), jsxRuntimeExports.jsx("td", {
                                 children: jsxRuntimeExports.jsx("img", {
                                     className: "rounded-lg w-[45px] h-[45px] hue-rotate-[-30deg]",
-                                    src: "https://vimefy.com/api-trade-x-pro/api/" + mt + "/" + Dt.image,
+                                    src: "/api/" + mt + "/" + Dt.image,
                                     alt: ""
                                 })
                             }), jsxRuntimeExports.jsx("td", {
@@ -13297,7 +13297,7 @@ function AdminCoins() {
                                     className: "flex items-center gap-2",
                                     children: [jsxRuntimeExports.jsx("img", {
                                         className: "rounded-[50%] w-[40px] h-[40px]",
-                                        src: "https://vimefy.com/api-trade-x-pro/api/" + kt + "/" + Rt.image,
+                                        src: "/api/" + kt + "/" + Rt.image,
                                         alt: ""
                                     }), Rt.name]
                                 })
@@ -13946,7 +13946,7 @@ function AuthUser() {
         nt(ut)
     }
       , ct = axios.create({
-        baseURL: "https://vimefy.com/api-trade-x-pro/api/",
+        baseURL: "https://admin.trade-x-pro.com/",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${rt}`
@@ -14331,7 +14331,7 @@ function AdminProduct() {
                             }), jsxRuntimeExports.jsx("td", {
                                 children: jsxRuntimeExports.jsx("img", {
                                     className: "rounded-lg w-[45px] h-[45px] ",
-                                    src: "https://vimefy.com/api-trade-x-pro/api/" + Dt + "/" + It.image,
+                                    src: "/api/" + Dt + "/" + It.image,
                                     alt: ""
                                 })
                             }), jsxRuntimeExports.jsx("td", {
@@ -16258,7 +16258,7 @@ function AdminSideNav({openCloseSideBar: _e, isShow: et}) {
                     className: "flex ",
                     children: jsxRuntimeExports.jsxs("a", {
                         className: " text-rose-400 text-[15px] text-center w-[100%]",
-                        children: [atob("VmVyc2lvbiAgMS4w"), " Ãƒâ€šÃ‚Â© ", atob("VmlzZXJTdG9yZQ==")]
+                        children: [atob("VmVyc2lvbiAgMS4w"), "Â© ", atob("")]
                     })
                 })
             })]
@@ -17842,7 +17842,7 @@ function Categories() {
                         className: "grayscale group-hover:grayscale-0 duration-300",
                         children: jsxRuntimeExports.jsx("img", {
                             className: "w-[45px] md:w-[70px] h-[45px] md:h-[70px] hue-rotate-[-30deg]",
-                            src: "https://vimefy.com/api-trade-x-pro/api/" + it + "/" + at.image,
+                            src: "/api/" + it + "/" + at.image,
                             alt: ""
                         })
                     }), jsxRuntimeExports.jsx("p", {
@@ -24324,7 +24324,7 @@ function Home() {
                         children: tt ? showAmount(tt.balance) : "0.00"
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-[10px] text-gray-400 flex items-center",
-                        children: ["USD ", tt ? showAmount(tt.balance) : "0.00", st.cur_sym]
+                        children: ["â‰ˆ ", tt ? showAmount(tt.balance) : "0.00", st.cur_sym]
                     })]
                 }), jsxRuntimeExports.jsx("div", {
                     className: "",
@@ -25166,8 +25166,8 @@ function Orders({datas: _e, setPageTitle: et}) {
                         })
                     }), jsxRuntimeExports.jsx("tbody", {
                         children: xt ? jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, {
-                            children: Array(10).fill(null).map( (bt, St) => jsxRuntimeExports.jsx(OrderSkl, {}, St))
-                        }) : at && at.map( (bt, St) => jsxRuntimeExports.jsxs("tr", {
+                            children: Array(10).fill(null).map( (bt, Tt) => jsxRuntimeExports.jsx(OrderSkl, {}, Tt))
+                        }) : at && at.map( (bt, Tt) => jsxRuntimeExports.jsxs("tr", {
                             className: "border-b border-gray-700",
                             children: [jsxRuntimeExports.jsxs("th", {
                                 className: "px-2 pt-1 pb-2 font-medium whitespace-nowrap text-white",
@@ -25177,15 +25177,18 @@ function Orders({datas: _e, setPageTitle: et}) {
                                 }), " ", jsxRuntimeExports.jsxs("span", {
                                     className: "text-gray-300 text-[11px]",
                                     children: ["/USDT", " "]
-                                }), jsxRuntimeExports.jsx("h1", {
+                                }), jsxRuntimeExports.jsxs("h1", {
                                     className: "text-[10px] text-emerald-500",
-                                    children: Number(Number(bt.buy_price)).toFixed(6)
+                                    children: [jsxRuntimeExports.jsx("span", {
+                                        className: "text-gray-300",
+                                        children: "open: "
+                                    }), Number(Number(bt.buy_price)).toFixed(2)]
                                 })]
                             }), jsxRuntimeExports.jsxs("td", {
                                 className: "px-2 pt-1 pb-2 text-end",
                                 children: [jsxRuntimeExports.jsxs("h1", {
                                     className: "font-medium whitespace-nowrap text-white",
-                                    children: [showAmount(bt.amount), " ", ft.cur_text]
+                                    children: [showAmount(bt.amount), " ", mt.cur_text]
                                 }), jsxRuntimeExports.jsxs("div", {
                                     className: "flex justify-end gap-2",
                                     children: [jsxRuntimeExports.jsx("h1", {
@@ -25198,12 +25201,28 @@ function Orders({datas: _e, setPageTitle: et}) {
                                 })]
                             }), jsxRuntimeExports.jsxs("td", {
                                 className: "px-2 pt-1 pb-2 text-center",
-                                children: [bt.win_loss == "win" ? jsxRuntimeExports.jsxs("h1", {
-                                    className: "text-[10px] text-gray-100 bg-emerald-500 rounded-[5px]",
-                                    children: ["WIN USD ", ft.cur_sym, showAmount(bt.profit)]
-                                }) : null, bt.win_loss == "lose" ? jsxRuntimeExports.jsxs("h1", {
-                                    className: "text-[10px] text-gray-100 bg-rose-500 rounded-[5px]",
-                                    children: ["LOSE USD ", ft.cur_sym, showAmount(bt.profit)]
+                                children: [bt.win_loss == "win" ? jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
+                                    children: [jsxRuntimeExports.jsxs("h1", {
+                                        className: "text-[10px] text-gray-100 bg-emerald-500 rounded-[5px]",
+                                        children: ["WIN â‰ˆ ", mt.cur_sym, showAmount(bt.profit)]
+                                    }), jsxRuntimeExports.jsxs("h1", {
+                                        className: "text-[10px] text-emerald-500 text-nowrap",
+                                        children: [jsxRuntimeExports.jsx("span", {
+                                            className: "text-gray-300 ",
+                                            children: "close: "
+                                        }), Number(Number(bt.trade_close_price)).toFixed(6)]
+                                    })]
+                                }) : null, bt.win_loss == "lose" ? jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
+                                    children: [jsxRuntimeExports.jsxs("h1", {
+                                        className: "text-[10px] text-gray-100 bg-rose-500 rounded-[5px]",
+                                        children: ["LOSE â‰ˆ ", mt.cur_sym, showAmount(bt.profit)]
+                                    }), jsxRuntimeExports.jsxs("h1", {
+                                        className: "text-[10px] text-rose-500 text-nowrap",
+                                        children: [jsxRuntimeExports.jsx("span", {
+                                            className: "text-gray-300",
+                                            children: "close: "
+                                        }), Number(Number(bt.trade_close_price)).toFixed(6)]
+                                    })]
                                 }) : null, bt.win_loss == "pending" ? bt.status === "runing" ? jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, {
                                     children: jsxRuntimeExports.jsx("h1", {
                                         className: "text-[10px] text-white bg-gray-500 rounded-[5px]",
@@ -25246,7 +25265,7 @@ function Orders({datas: _e, setPageTitle: et}) {
                     }
                     ,
                     className: "join-item btn !min-h-[2rem] h-[2rem]",
-                    children: "Ã‚Â«"
+                    children: "Â«"
                 }), jsxRuntimeExports.jsxs("button", {
                     className: "join-item btn !min-h-[2rem] h-[2rem]",
                     children: ["Page ", dt]
@@ -25256,12 +25275,12 @@ function Orders({datas: _e, setPageTitle: et}) {
                     }
                     ,
                     className: "join-item btn !min-h-[2rem] h-[2rem]",
-                    children: "Ãƒâ€šÃ‚Â»"
+                    children: "Â»"
                 })]
             })
         }) : null]
     })
-}
+    }
 function Products() {
     const [_e,et] = reactExports.useState("")
       , [tt,rt] = reactExports.useState("")
@@ -26078,35 +26097,19 @@ function Referral({setPageTitle: _e}) {
                 className: "flex gap-2",
                 children: [jsxRuntimeExports.jsx("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Level 1 Deposit Commission:"
+                    children: "Deposit Refer Commission:"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: ["4","%"]
+                    children: [et.deposit_refer_bonus, "%"]
                 })]
-            }),
-               jsxRuntimeExports.jsxs("div", {
-      className: "flex gap-2 mt-2",
-      children: [
-        jsxRuntimeExports.jsx("div", {
-          className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-          children: "Level 2 Deposit Commission:"
-        }),
-        jsxRuntimeExports.jsxs("div", {
-          className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-          children: ["2","%"]
-        })
-      ]
-    }),
-            
-            
-             jsxRuntimeExports.jsxs("div", {
+            }), jsxRuntimeExports.jsxs("div", {
                 className: "flex gap-2 mt-2",
                 children: [jsxRuntimeExports.jsx("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Level 3 Deposit Commission:"
+                    children: "Trade Win Refer Commission:"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: ["2", "%"]
+                    children: [et.trade_refer_bonus, "%"]
                 })]
             })]
         }), jsxRuntimeExports.jsxs("div", {
@@ -26184,7 +26187,7 @@ function Referral({setPageTitle: _e}) {
                     method: "dialog",
                     children: jsxRuntimeExports.jsx("button", {
                         className: "btn btn-sm btn-circle btn-ghost absolute right-2 top-2",
-                        children: "ÃƒÂ¢Ã…â€œÃ¢â‚¬Â¢"
+                        children: "âœ•"
                     })
                 }), jsxRuntimeExports.jsx("h3", {
                     className: "font-bold text-yellow-500 text-lg",
@@ -28483,231 +28486,27 @@ function Wallets({setPageTitle: _e}) {
     }
     ), []),
     jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
-        children: [
-            (rt?.kyc_status === 0 || rt?.kyc_status === 2 || rt?.kyc_status === 3) && jsxRuntimeExports.jsx("div", {
-                className: "min-h-screen max-w-md mx-auto p-4 flex flex-col items-center justify-center text-white",
+        children: [jsxRuntimeExports.jsxs("div", {
+            className: "container mx-auto px-[12px] border-b border-gray-700 pb-3",
+            children: [jsxRuntimeExports.jsx("div", {
+                className: "flex items-center",
                 children: jsxRuntimeExports.jsxs("div", {
-                  className: "w-full",
-                  children: [
-                    jsxRuntimeExports.jsxs("div", {
-                      className: "flex items-center justify-between mb-6",
-                      children: [
-                        jsxRuntimeExports.jsx("h1", {
-                          className: "text-2xl font-bold",
-                          children: "Identity Verification"
-                        }),
-                        jsxRuntimeExports.jsxs("div", {
-                          className: "inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-gray-500/20 text-gray-500 text-xs font-medium",
-                          children: [
-                            jsxRuntimeExports.jsxs("svg", {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              width: "12",
-                              height: "12",
-                              viewBox: "0 0 24 24",
-                              fill: "none",
-                              stroke: "currentColor",
-                              strokeWidth: "2",
-                              strokeLinecap: "round",
-                              strokeLinejoin: "round",
-                              children: [
-                                jsxRuntimeExports.jsx("path", { d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" }),
-                                jsxRuntimeExports.jsx("path", { d: "M12 9v4" }),
-                                jsxRuntimeExports.jsx("path", { d: "M12 17h.01" })
-                              ]
-                            }),
-                            rt?.kyc_status === 0 ? "Not Verified" : rt?.kyc_status === 2 ? "Pending" : "Rejected"
-                          ]
-                        })
-                      ]
-                    }),
-                    jsxRuntimeExports.jsxs("div", {
-                      className: "border border-amber-500/30 rounded-xl bg-[#18181b] mb-6",
-                      children: [
-                        jsxRuntimeExports.jsxs("div", {
-                          className: "p-6 flex flex-col items-center text-center",
-                          children: [
-                            jsxRuntimeExports.jsx("div", {
-                              className: `h-20 w-20 rounded-full mb-4 flex items-center justify-center ${
-                                rt?.kyc_status === 0
-                                  ? "bg-red-500/20"
-                                  : rt?.kyc_status === 2
-                                  ? "bg-yellow-500/20"
-                                  : "bg-red-500/20"
-                              }`,
-                              children: rt?.kyc_status === 2
-                                ? jsxRuntimeExports.jsxs("svg", {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    width: "40",
-                                    height: "40",
-                                    viewBox: "0 0 24 24",
-                                    fill: "none",
-                                    stroke: "#facc15",
-                                    strokeWidth: "2",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    children: [
-                                      jsxRuntimeExports.jsx("circle", { cx: "12", cy: "12", r: "10" }),
-                                      jsxRuntimeExports.jsx("path", { d: "M12 6v6" }),
-                                      jsxRuntimeExports.jsx("path", { d: "M12 18h.01" })
-                                    ]
-                                  })
-                                : jsxRuntimeExports.jsxs("svg", {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    width: "40",
-                                    height: "40",
-                                    viewBox: "0 0 24 24",
-                                    fill: "none",
-                                    stroke: "#ef4444",
-                                    strokeWidth: "2",
-                                    strokeLinecap: "round",
-                                    strokeLinejoin: "round",
-                                    children: [
-                                      jsxRuntimeExports.jsx("circle", { cx: "12", cy: "12", r: "10" }),
-                                      jsxRuntimeExports.jsx("line", { x1: "15", y1: "9", x2: "9", y2: "15" }),
-                                      jsxRuntimeExports.jsx("line", { x1: "9", y1: "9", x2: "15", y2: "15" })
-                                    ]
-                                  })
-                            }),
-                            jsxRuntimeExports.jsx("h2", {
-                              className: "text-xl font-semibold mb-2",
-                              children:
-                                rt?.kyc_status === 0
-                                  ? "KYC Not Verified"
-                                  : rt?.kyc_status === 2
-                                  ? "KYC Pending"
-                                  : "KYC Rejected"
-                            }),
-                            jsxRuntimeExports.jsx("p", {
-                              className: "text-gray-400 mb-4",
-                              children:
-                                rt?.kyc_status === 0
-                                  ? "Your identity verification is not complete. Please complete the KYC process to access all platform features."
-                                  : rt?.kyc_status === 2
-                                  ? "Your KYC verification is currently pending. Please wait while we review your documents."
-                                  : "Your KYC application was rejected. Please reapply with accurate and valid information."
-                            }),
-                            jsxRuntimeExports.jsxs("div", {
-                              className: "bg-[#27272a]/70 rounded-md p-4 w-full mb-4",
-                              children: [
-                                jsxRuntimeExports.jsxs("div", {
-                                  className: "flex items-center gap-2",
-                                  children: [
-                                    jsxRuntimeExports.jsxs("svg", {
-                                      xmlns: "http://www.w3.org/2000/svg",
-                                      width: "18",
-                                      height: "18",
-                                      viewBox: "0 0 24 24",
-                                      fill: "none",
-                                      stroke: "#f59e0b",
-                                      strokeWidth: "2",
-                                      strokeLinecap: "round",
-                                      strokeLinejoin: "round",
-                                      children: [
-                                        jsxRuntimeExports.jsx("path", { d: "m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" }),
-                                        jsxRuntimeExports.jsx("path", { d: "M12 9v4" }),
-                                        jsxRuntimeExports.jsx("path", { d: "M12 17h.01" })
-                                      ]
-                                    }),
-                                    jsxRuntimeExports.jsx("p", {
-                                      className: "text-sm text-amber-400",
-                                      children: "Why is verification required?"
-                                    })
-                                  ]
-                                }),
-                                jsxRuntimeExports.jsx("p", {
-                                  className: "text-xs text-gray-400 mt-2",
-                                  children: "KYC is mandatory for platform security and to meet regulatory compliance. Please ensure your details are accurate when submitting."
-                                })
-                              ]
-                            })
-                          ]
-                        }),
-                        rt?.kyc_status !== 2 && jsxRuntimeExports.jsx("div", {
-                          className: "flex justify-center p-6 pt-0",
-                          children: jsxRuntimeExports.jsx("a", {
-                            href: `https://kyc.trade-x-pro.com/?username=${rt?.username}`,
-                            target: "_blank",
-                            rel: "noopener noreferrer",
-                            className: "inline-flex items-center justify-center px-4 py-2 rounded-md bg-amber-500 hover:bg-amber-600 text-black font-medium transition",
-                            children: rt?.kyc_status === 0 ? "Complete KYC Verification" : "Reapply Verification"
-                          })
-                        })
-                      ]
-                    })
-                  ]
+                    className: "text-start flex-auto",
+                    children: [jsxRuntimeExports.jsx("h1", {
+                        className: "text-[12px] text-gray-300",
+                        children: "Total Balance"
+                    }), jsxRuntimeExports.jsxs("h1", {
+                        className: "text-[24px] font-bold text-gray-100",
+                        children: [rt ? showAmount(rt.balance) : "0.00", " ", jsxRuntimeExports.jsx("span", {
+                            className: "text-[12px]",
+                            children: xt.cur_text
+                        })]
+                    }), jsxRuntimeExports.jsxs("h1", {
+                        className: "text-[10px] text-gray-400 flex items-center",
+                        children: ["â‰ˆ ", rt ? showAmount(rt.balance) : "0.00", xt.cur_sym]
+                    })]
                 })
-              }),
-              
-
-            rt?.kyc_status === 1 &&   jsxRuntimeExports.jsxs("div", {
-                className: "container mx-auto px-[12px] border-b border-gray-700 pb-3",
-                children: [
-                  
-                   
-                    rt?.kyc_status === 1 &&         jsxRuntimeExports.jsx("div", {
-                        className: "flex items-center justify-between", // Aligns items in a row
-                        children: [
-                            // Main Balance (Left)
-                            jsxRuntimeExports.jsxs("div", {
-                                className: "text-start",
-                                children: [
-                                    jsxRuntimeExports.jsx("h1", {
-                                        className: "text-[12px] text-gray-300",
-                                        children: "Main Balance"
-                                    }),
-                                    jsxRuntimeExports.jsxs("h1", {
-                                        className: "text-[24px] font-bold text-gray-100",
-                                        children: [
-                                            rt ? showAmount(rt.balance) : "0.00",
-                                            " ",
-                                            jsxRuntimeExports.jsx("span", {
-                                                className: "text-[12px]",
-                                                children: xt?.cur_text || ""
-                                            })
-                                        ]
-                                    }),
-                                    jsxRuntimeExports.jsxs("h1", {
-                                        className: "text-[10px] text-gray-400 flex items-center",
-                                        children: [
-                                            "USD ",
-                                            rt ? showAmount(rt.balance) : "0.00",
-                                            xt?.cur_sym || ""
-                                        ]
-                                    })
-                                ]
-                            }),
-                            
-                                                        
-                            jsxRuntimeExports.jsxs("div", {
-                                className: "text-end",
-                                children: [
-                                    jsxRuntimeExports.jsx("h1", {
-                                        className: "text-[12px] text-gray-300",
-                                        children: "Profit Balance"
-                                    }),
-                                    jsxRuntimeExports.jsxs("h1", {
-                                        className: "text-[24px] font-bold text-white",
-                                        children: [
-                                            rt ? showAmount(rt.profit_balances) : "0.00",
-                                            " ",
-                                            jsxRuntimeExports.jsx("span", {
-                                                className: "text-[12px]",
-                                                children: xt?.cur_text || ""
-                                            })
-                                        ]
-                                    }),
-                                    jsxRuntimeExports.jsxs("h1", {
-                                        className: "text-[10px] text-gray-400 flex items-center",
-                                        children: [
-                                            "USD ",
-                                            rt ? showAmount(rt.profit_balances) : "0.00",
-                                            xt?.cur_sym || ""
-                                        ]
-                                    })
-                                ]
-                            })
-                        ]
-                    }),
+            }),
     
             
             jsxRuntimeExports.jsxs("div", {
@@ -28780,7 +28579,7 @@ function Wallets({setPageTitle: _e}) {
                     })]
                 })]
             })]
-        }),  rt?.kyc_status === 1 && jsxRuntimeExports.jsxs("div", {
+        }), jsxRuntimeExports.jsxs("div", {
             className: "container mx-auto px-[12px] pb-3 mt-2",
             children: [jsxRuntimeExports.jsx("h1", {
                 className: "text-sm font-bold",
@@ -29655,9 +29454,9 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
       , st = () => {
         new window.google.translate.TranslateElement({
             pageLanguage: "en",
-            includedLanguages: "en",
+            includedLanguages: "en,ar",
             autoDisplay: !1
-        },"")
+        },"google_translate_element")
     }
     ;
     return reactExports.useEffect( () => {
@@ -29811,22 +29610,7 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
                                 className: "ms-3 text-gray-400",
                                 children: "Referral"
                             })]
-                        }), jsxRuntimeExports.jsxs("a", {
-    href: `https://level.trade-x-pro.com?username=${tt.username}`,
-    target: "_blank", // opens in new tab
-    rel: "noopener noreferrer", // security for external links
-    className: "flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group",
-    children: [
-        jsxRuntimeExports.jsx("i", {
-            className: "fi fi-rr-star mt-1"
-        }),
-        jsxRuntimeExports.jsx("span", {
-            className: "ms-3 text-gray-400",
-            children: "My level"
-        })
-    ]
-}), 
-                         jsxRuntimeExports.jsxs(Link, {
+                        }), jsxRuntimeExports.jsxs(Link, {
                             onClick: () => et(!1),
                             to: "/settings",
                             className: "flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group",
@@ -29836,9 +29620,7 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
                                 className: "ms-3 text-gray-400",
                                 children: "Settings"
                             })]
-                        }),
-                        
-                        jsxRuntimeExports.jsxs("div", {
+                        }), jsxRuntimeExports.jsxs("div", {
                             onClick: () => {
                                 et(!1),
                                 rt()
@@ -29854,7 +29636,7 @@ function SideNav({isShow: _e, setIsShow: et, user: tt}) {
                         })]
                     })
                 }), jsxRuntimeExports.jsx("div", {
-                    id: ""
+                    id: "google_translate_element"
                 })]
             })]
         })
@@ -29883,13 +29665,22 @@ function BottomNav() {
                     children: "Markets"
                 })]
             }), jsxRuntimeExports.jsxs(NavLink, {
-                to: "/bot-trade",
+                to: "/trading",
                 className: ({isActive: _e}) => _e ? "text-white" : "text-gray-400 bg-binance",
                 children: [jsxRuntimeExports.jsx("i", {
                     className: "fi fi-sr-coins leading-[0px] mb-[3px] text-[18px]"
                 }), jsxRuntimeExports.jsx("span", {
                     className: "btm-nav-label text-[9px]",
-                    children: "Bot Trade"
+                    children: "Trade"
+                })]
+            }), jsxRuntimeExports.jsxs(NavLink, {
+                to: "/orders",
+                className: ({isActive: _e}) => _e ? "text-white" : "text-gray-400 bg-binance",
+                children: [jsxRuntimeExports.jsx("i", {
+                    className: "fi fi-sr-ballot leading-[0px] mb-[3px] text-[18px]"
+                }), jsxRuntimeExports.jsx("span", {
+                    className: "btm-nav-label text-[9px]",
+                    children: "Orders"
                 })]
             }), jsxRuntimeExports.jsxs(NavLink, {
                 to: "/wallets",
@@ -30048,7 +29839,7 @@ function WithdrawConfirm({setPageTitle: _e}) {
                         className: "text-gray-500 text-[11px] flex-auto text-start",
                         children: ["Available", " ", jsxRuntimeExports.jsx("span", {
                             className: "text-gray-300",
-                            children: rt ? showAmount(rt.profit_balances) : "0.00"
+                            children: rt ? showAmount(rt.balance) : "0.00"
                         }), " ", et.cur_text]
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-gray-500 text-[11px] flex-auto text-end",
@@ -30865,6 +30656,7 @@ function AdminHelpAndSupport() {
         })
     })
 }
+
 const userIcon = "data:image/svg+xml,%3csvg%20fill='%23000000'%20viewBox='0%200%2024%2024'%20id='user-circle-2'%20data-name='Flat%20Color'%20xmlns='http://www.w3.org/2000/svg'%20class='icon%20flat-color'%3e%3cg%20id='SVGRepo_bgCarrier'%20stroke-width='0'%3e%3c/g%3e%3cg%20id='SVGRepo_tracerCarrier'%20stroke-linecap='round'%20stroke-linejoin='round'%3e%3c/g%3e%3cg%20id='SVGRepo_iconCarrier'%3e%3ccircle%20id='primary'%20cx='12'%20cy='12'%20r='10'%20style='fill:%20%235f727c;'%3e%3c/circle%3e%3cpath%20id='secondary'%20d='M19.37,17.88a8,8,0,0,0-3.43-3.83,5,5,0,1,0-7.88,0,8,8,0,0,0-3.43,3.83A1,1,0,0,0,4.83,19a10,10,0,0,0,14.24.1l.09-.09A1,1,0,0,0,19.37,17.88Z'%20style='fill:%20%23fad900;'%3e%3c/path%3e%3c/g%3e%3c/svg%3e";
 function BalanceTransfer({setPageTitle: _e}) {
     const {http: et, user: tt, setUser: rt} = AuthUser()
@@ -30876,8 +30668,8 @@ function BalanceTransfer({setPageTitle: _e}) {
       , {setting: pt} = SiteSetting()
       , dt = reactExports.useRef(null);
     reactExports.useEffect( () => (_e("Balance Transfer"),
-    et.get("/user/balance-transfer").then( ({data: mt}) => {
-        rt(mt.user)
+    et.get("/user/balance-transfer").then( ({data: ft}) => {
+        rt(ft.user)
     }
     ),
     () => {
@@ -30889,21 +30681,21 @@ function BalanceTransfer({setPageTitle: _e}) {
         et.post("/user/balance-transfer-submit", {
             pay_id: st,
             amount: parseFloat(ot)
-        }).then( ({data: mt}) => {
-            mt.cls === "success" && (n.success(mt.message),
-            rt(mt.user),
+        }).then( ({data: ft}) => {
+            ft.cls === "success" && (n.success(ft.message),
+            rt(ft.user),
             ut(!1),
             lt(""),
             it(""),
             dt.current.close()),
-            mt.cls === "error" && n.error(mt.message)
+            ft.cls === "error" && n.error(ft.message)
         }
-        ).catch(mt => {
+        ).catch(ft => {
             ut(!1)
         }
         )
     }
-      , ft = () => {
+      , mt = () => {
         if (xt(!0),
         !ot) {
             n.error("Amount is required!"),
@@ -30915,9 +30707,9 @@ function BalanceTransfer({setPageTitle: _e}) {
             xt(!1);
             return
         }
-        et.get("/user/payid" + st).then( ({data: mt}) => {
-            mt.cls === "success" ? (at(mt.toUser),
-            dt.current.showModal()) : n.error(mt.message),
+        et.get("/user/payid/" + st).then( ({data: ft}) => {
+            ft.cls === "success" ? (at(ft.toUser),
+            dt.current.showModal()) : n.error(ft.message),
             xt(!1)
         }
         )
@@ -30935,7 +30727,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                         className: "fi fi-rr-coins w-4 h-5 text-gray-400"
                     }),
                     value: ot,
-                    onChange: mt => lt(mt.target.value),
+                    onChange: ft => lt(ft.target.value),
                     placeholder: "Amount"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "flex mb-2 -mt-1",
@@ -30943,20 +30735,35 @@ function BalanceTransfer({setPageTitle: _e}) {
                         className: "text-gray-500 text-[11px] flex-auto text-start",
                         children: ["Available", " ", jsxRuntimeExports.jsx("span", {
                             className: "text-gray-300",
-                            children: tt ? showAmount(tt.profit_balances) : "0.00"
+                            children: tt ? showAmount(tt.balance) : "0.00"
                         }), " ", pt.cur_text]
                     }), jsxRuntimeExports.jsxs("h1", {
-                        className: "",
+                        className: "text-gray-500 text-[11px] flex-auto text-end",
                         children: ["Minimum", " ", jsxRuntimeExports.jsx("span", {
-                            className: "",
+                            className: "text-gray-300",
                             children: pt ? showAmount(pt.transfer_min_limit) : "0.00"
                         }), " ", pt.cur_text]
                     })]
-                }),  jsxRuntimeExports.jsx("div", {
-                    className: "",
+                }), jsxRuntimeExports.jsx(CustomInput, {
+                    type: "number",
+                    className: "border-gray-600 focus:border-yellow-400",
+                    icon: jsxRuntimeExports.jsx("i", {
+                        className: "fi fi-rr-wallet w-4 h-5 text-gray-400"
+                    }),
+                    value: st,
+                    onChange: ft => it(ft.target.value),
+                    placeholder: "Pay Id"
+                }), jsxRuntimeExports.jsx("div", {
+                    className: "mx-2 my-2",
                     children: jsxRuntimeExports.jsx("div", {
-                        className: "",
-                         
+                        className: "flex mb-2",
+                        children: jsxRuntimeExports.jsxs("h1", {
+                            className: "text-gray-500 text-[11px] flex-auto",
+                            children: ["Charge", " ", jsxRuntimeExports.jsxs("span", {
+                                className: "text-gray-300",
+                                children: [ot ? showAmount(pt.transfer_charge * ot / 100) : "0.00", " "]
+                            }), " ", pt.cur_text]
+                        })
                     })
                 }), jsxRuntimeExports.jsxs("div", {
                     className: " flex text-gray-500 text-[12px] mx-2",
@@ -30964,7 +30771,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                         className: "text-[15px] pe-2",
                         children: "*"
                     }), jsxRuntimeExports.jsx("span", {
-                        children: "The balance transfer to our main balance."
+                        children: "After filling all the information click the button."
                     })]
                 })]
             }), jsxRuntimeExports.jsx("div", {
@@ -30979,10 +30786,15 @@ function BalanceTransfer({setPageTitle: _e}) {
                         }), jsxRuntimeExports.jsxs("h1", {
                             className: "text-gray-300 font-bold text-[18px]",
                             children: [ot ? showAmount(ot - pt.transfer_charge * ot / 100) : "0.00", " ", pt.cur_text]
-                         
+                        }), jsxRuntimeExports.jsxs("h1", {
+                            className: "text-gray-500 text-[12px]",
+                            children: ["Processing fee:", " ", jsxRuntimeExports.jsxs("span", {
+                                className: "text-gray-300 font-bold",
+                                children: [getAmount(pt.transfer_charge), "%"]
+                            })]
                         })]
                     }), jsxRuntimeExports.jsx(CustomBtn, {
-                        onClick: () => ft(),
+                        onClick: () => mt(),
                         disabled: ht,
                         bgFrom: "bg-yellow-400",
                         className: `!w-[110px] text-[14px] !font-semibold !py-0 !h-[40px] ${ht ? "!bg-gray-500 !text-white" : "bg-yellow-400 hover:bg-yellow-500 !text-gray-800"}`,
@@ -31011,7 +30823,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                     className: "mt-3",
                     children: [jsxRuntimeExports.jsx("h1", {
                         className: "text-[12px] text-white",
-                        children: "Send To Main Balance"
+                        children: "Send To"
                     }), jsxRuntimeExports.jsx("div", {
                         className: "bg-gray-700/30 p-2 rounded-[5px] mt-2",
                         children: jsxRuntimeExports.jsxs("div", {
@@ -31023,6 +30835,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                             }), jsxRuntimeExports.jsxs("div", {
                                 children: [jsxRuntimeExports.jsxs("h1", {
                                     className: "font-bold text-white text-[14px]",
+                                    children: [nt ? nt.pay_id.match(/.{1,4}/g).join(" ") : "0000 0000", " ", "(PAY ID)"]
                                 }), jsxRuntimeExports.jsxs("h1", {
                                     className: "font-normal text-gray-300 text-[14px]",
                                     children: ["Username:", " ", nt ? nt.username : jsxRuntimeExports.jsx(TextLoader, {})]
@@ -31041,7 +30854,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                             className: "flex gap-3 items-center",
                             children: [jsxRuntimeExports.jsx("h1", {
                                 className: "flex-auto font-normal text-gray-300 text-[14px]",
-                                children: "You Receives"
+                                children: "Payee Receives"
                             }), jsxRuntimeExports.jsxs("div", {
                                 className: "text-end",
                                 children: [jsxRuntimeExports.jsxs("h1", {
@@ -31049,6 +30862,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                                     children: [ot ? showAmount(ot - pt.transfer_charge * ot / 100) : "0.00", " ", pt.cur_text]
                                 }), jsxRuntimeExports.jsxs("h1", {
                                     className: "font-normal text-gray-300 text-[14px]",
+                                    children: ["â‰ˆ (", ot, " -", " ", pt.transfer_charge * ot / 100, ")", pt.cur_sym]
                                 })]
                             })]
                         })
@@ -31057,7 +30871,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                     className: "bg-yellow-500/20 p-2 rounded-[5px] mt-12",
                     children: jsxRuntimeExports.jsx("h1", {
                         className: "text-yellow-500/80 text-[12px]",
-                        children: "The balance transfer to our main balance."
+                        children: "Please ensure payee and amount information is correct. No refunds are supported."
                     })
                 }), jsxRuntimeExports.jsx("div", {
                     className: "mt-3",
@@ -74633,7 +74447,7 @@ var constants = {};
             onClick: function(dt) {
                 return xt.removeItem(dt, ct, ut.closeOnSelect)
             }
-        }, "x"))
+        }, "Ã—"))
     }
       , at = (0,
     et.default)("span", {
@@ -75378,7 +75192,7 @@ var Clear = {};
             onKeyPress: function() {
                 return ut.clearAll()
             }
-        }, "x")
+        }, "Ã—")
     }
       , nt = (0,
     et.default)("div", {
@@ -76164,13 +75978,13 @@ function BotTrade({setPageTitle: _e}) {
                     className: "text-start flex-auto",
                     children: [jsxRuntimeExports.jsxs("h1", {
                         className: "text-[12px] text-gray-300",
-                        children: ["Main Balance (", mt.cur_text, ")"]
+                        children: ["Total Balance (", mt.cur_text, ")"]
                     }), jsxRuntimeExports.jsx("h1", {
                         className: "text-[24px] font-bold text-gray-100",
                         children: vt ? showAmount(vt.balance) : "0.00"
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-[10px] text-gray-400 flex items-center",
-                        children: ["USD ", vt ? showAmount(vt.balance) : "0.00", mt.cur_sym]
+                        children: ["â‰ˆ ", vt ? showAmount(vt.balance) : "0.00", mt.cur_sym]
                     })]
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "text-end flex-auto",
@@ -76182,7 +75996,7 @@ function BotTrade({setPageTitle: _e}) {
                         children: vt ? showAmount(vt.bot_balance) : "0.00"
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-[10px] text-gray-400 flex items-center justify-end",
-                        children: ["USD ", vt ? showAmount(vt.bot_balance) : "0.00", mt.cur_sym]
+                        children: ["â‰ˆ ", vt ? showAmount(vt.bot_balance) : "0.00", mt.cur_sym]
                     })]
                 })]
             })
