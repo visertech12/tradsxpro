@@ -29688,22 +29688,13 @@ function BottomNav() {
                     children: "Markets"
                 })]
             }), jsxRuntimeExports.jsxs(NavLink, {
-                to: "/trading",
+                to: "/bot-trade",
                 className: ({isActive: _e}) => _e ? "text-white" : "text-gray-400 bg-binance",
                 children: [jsxRuntimeExports.jsx("i", {
                     className: "fi fi-sr-coins leading-[0px] mb-[3px] text-[18px]"
                 }), jsxRuntimeExports.jsx("span", {
                     className: "btm-nav-label text-[9px]",
-                    children: "Trade"
-                })]
-            }), jsxRuntimeExports.jsxs(NavLink, {
-                to: "/orders",
-                className: ({isActive: _e}) => _e ? "text-white" : "text-gray-400 bg-binance",
-                children: [jsxRuntimeExports.jsx("i", {
-                    className: "fi fi-sr-ballot leading-[0px] mb-[3px] text-[18px]"
-                }), jsxRuntimeExports.jsx("span", {
-                    className: "btm-nav-label text-[9px]",
-                    children: "Orders"
+                    children: "Bot Trade"
                 })]
             }), jsxRuntimeExports.jsxs(NavLink, {
                 to: "/wallets",
