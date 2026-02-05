@@ -24324,7 +24324,7 @@ function Home() {
                         children: tt ? showAmount(tt.balance) : "0.00"
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-[10px] text-gray-400 flex items-center",
-                        children: ["â‰ˆ ", tt ? showAmount(tt.balance) : "0.00", st.cur_sym]
+                        children: ["≈ ", tt ? showAmount(tt.balance) : "0.00", st.cur_sym]
                     })]
                 }), jsxRuntimeExports.jsx("div", {
                     className: "",
@@ -25204,7 +25204,7 @@ function Orders({datas: _e, setPageTitle: et}) {
                                 children: [bt.win_loss == "win" ? jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
                                     children: [jsxRuntimeExports.jsxs("h1", {
                                         className: "text-[10px] text-gray-100 bg-emerald-500 rounded-[5px]",
-                                        children: ["WIN â‰ˆ ", mt.cur_sym, showAmount(bt.profit)]
+                                        children: ["WIN ≈ ", mt.cur_sym, showAmount(bt.profit)]
                                     }), jsxRuntimeExports.jsxs("h1", {
                                         className: "text-[10px] text-emerald-500 text-nowrap",
                                         children: [jsxRuntimeExports.jsx("span", {
@@ -25215,7 +25215,7 @@ function Orders({datas: _e, setPageTitle: et}) {
                                 }) : null, bt.win_loss == "lose" ? jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, {
                                     children: [jsxRuntimeExports.jsxs("h1", {
                                         className: "text-[10px] text-gray-100 bg-rose-500 rounded-[5px]",
-                                        children: ["LOSE â‰ˆ ", mt.cur_sym, showAmount(bt.profit)]
+                                        children: ["LOSE ≈ ", mt.cur_sym, showAmount(bt.profit)]
                                     }), jsxRuntimeExports.jsxs("h1", {
                                         className: "text-[10px] text-rose-500 text-nowrap",
                                         children: [jsxRuntimeExports.jsx("span", {
@@ -30876,7 +30876,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                                     children: [ot ? showAmount(ot - pt.transfer_charge * ot / 100) : "0.00", " ", pt.cur_text]
                                 }), jsxRuntimeExports.jsxs("h1", {
                                     className: "font-normal text-gray-300 text-[14px]",
-                                    children: ["â‰ˆ (", ot, " -", " ", pt.transfer_charge * ot / 100, ")", pt.cur_sym]
+                                    children: ["≈ (", ot, " -", " ", pt.transfer_charge * ot / 100, ")", pt.cur_sym]
                                 })]
                             })]
                         })
@@ -75998,7 +75998,7 @@ function BotTrade({setPageTitle: _e}) {
                         children: vt ? showAmount(vt.balance) : "0.00"
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-[10px] text-gray-400 flex items-center",
-                        children: ["â‰ˆ ", vt ? showAmount(vt.balance) : "0.00", mt.cur_sym]
+                        children: ["≈ ", vt ? showAmount(vt.balance) : "0.00", mt.cur_sym]
                     })]
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "text-end flex-auto",
@@ -76010,7 +76010,7 @@ function BotTrade({setPageTitle: _e}) {
                         children: vt ? showAmount(vt.bot_balance) : "0.00"
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-[10px] text-gray-400 flex items-center justify-end",
-                        children: ["â‰ˆ ", vt ? showAmount(vt.bot_balance) : "0.00", mt.cur_sym]
+                        children: ["≈ ", vt ? showAmount(vt.bot_balance) : "0.00", mt.cur_sym]
                     })]
                 })]
             })
