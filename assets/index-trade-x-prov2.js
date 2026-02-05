@@ -28508,7 +28508,37 @@ function Wallets({setPageTitle: _e}) {
                 })
             }),
     
-            
+            jsxRuntimeExports.jsxs("div", {
+                                className: "text-end",
+                                children: [
+                                    jsxRuntimeExports.jsx("h1", {
+                                        className: "text-[12px] text-gray-300",
+                                        children: "Profit Balance"
+                                    }),
+                                    jsxRuntimeExports.jsxs("h1", {
+                                        className: "text-[24px] font-bold text-white",
+                                        children: [
+                                            rt ? showAmount(rt.profit_balances) : "0.00",
+                                            " ",
+                                            jsxRuntimeExports.jsx("span", {
+                                                className: "text-[12px]",
+                                                children: xt?.cur_text || ""
+                                            })
+                                        ]
+                                    }),
+                                    jsxRuntimeExports.jsxs("h1", {
+                                        className: "text-[10px] text-gray-400 flex items-center",
+                                        children: [
+                                            "USD ",
+                                            rt ? showAmount(rt.profit_balances) : "0.00",
+                                            xt?.cur_sym || ""
+                                        ]
+                                    })
+                                ]
+                            })
+                        ]
+                    }),
+                   
             jsxRuntimeExports.jsxs("div", {
                 className: "flex gap-2 mt-2",
                 children: [jsxRuntimeExports.jsx(Link, {
