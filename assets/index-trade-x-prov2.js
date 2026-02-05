@@ -28655,7 +28655,7 @@ function Wallets({setPageTitle: _e}) {
                     children: Array(10).fill(null).map( (pt, dt) => jsxRuntimeExports.jsx(WalletCoinsSkl, {}, dt))
                 })
             })]
-        })]
+
     })
 }
 function UserLogin() {
