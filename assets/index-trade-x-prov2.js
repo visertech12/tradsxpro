@@ -28677,9 +28677,6 @@ function Wallets({setPageTitle: _e}) {
             ]
         })
 
-    
-})
-
 }
 function UserLogin() {
     const [_e,et] = reactExports.useState("")
