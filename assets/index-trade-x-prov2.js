@@ -28533,7 +28533,7 @@ function Wallets({setPageTitle: _e}) {
                                 jsxRuntimeExports.jsxs("h1", {
                                     className: "text-[24px] font-bold text-white",
                                     children: [
-                                        rt ? showAmount(rt.balance) : "0.00",
+                                        rt ? showAmount(rt.profit_balances) : "0.00",
                                         " ",
                                         jsxRuntimeExports.jsx("span", {
                                             className: "text-[12px]",
