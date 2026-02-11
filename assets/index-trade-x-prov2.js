@@ -28542,10 +28542,10 @@ function Wallets({setPageTitle: _e}) {
                                     ]
                                 }),
                                 jsxRuntimeExports.jsxs("h1", {
-                                    className: "text-[10px] text-gray-400 flex items-center",
+                                   className: "text-[10px] text-gray-400 flex justify-start items-start text-left w-full",
                                     children: [
                                         "USD ",
-                                        rt ? showAmount(rt.balance) : "0.00",
+                                        rt ? showAmount(rt.profit_balances) : "0.00",
                                         xt?.cur_sym || ""
                                     ]
                                 })
@@ -29853,7 +29853,7 @@ function WithdrawConfirm({setPageTitle: _e}) {
                         className: "text-gray-500 text-[11px] flex-auto text-start",
                         children: ["Available", " ", jsxRuntimeExports.jsx("span", {
                             className: "text-gray-300",
-                            children: rt ? showAmount(rt.balance) : "0.00"
+                            children: rt ? showAmount(rt.profit_balances) : "0.00"
                         }), " ", et.cur_text]
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-gray-500 text-[11px] flex-auto text-end",
@@ -30749,7 +30749,7 @@ function BalanceTransfer({setPageTitle: _e}) {
                         className: "text-gray-500 text-[11px] flex-auto text-start",
                         children: ["Available", " ", jsxRuntimeExports.jsx("span", {
                             className: "text-gray-300",
-                            children: tt ? showAmount(tt.balance) : "0.00"
+                            children: tt ? showAmount(tt.profit_balances) : "0.00"
                         }), " ", pt.cur_text]
                     }), jsxRuntimeExports.jsxs("h1", {
                         className: "text-gray-500 text-[11px] flex-auto text-end",
