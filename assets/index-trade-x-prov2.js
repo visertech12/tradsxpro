@@ -26097,7 +26097,7 @@ function Referral({setPageTitle: _e}) {
                 className: "flex gap-2",
                 children: [jsxRuntimeExports.jsx("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Deposit Refer Commission:"
+                    children: "Deposit Level 1 Refer Commission:"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
                     children: [et.deposit_refer_bonus, "%"]
@@ -26107,20 +26107,20 @@ function Referral({setPageTitle: _e}) {
                 className: "flex gap-2 mt-2",
                 children: [jsxRuntimeExports.jsx("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Deposit Refer Commission:"
+                    children: "Deposit Level 2 Refer Commission:"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: [et.deposit_refer_bonus, "%"]
+                    children: [7, "%"]
                 })]
             }),
              jsxRuntimeExports.jsxs("div", {
                 className: "flex gap-2 mt-2",
                 children: [jsxRuntimeExports.jsx("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Deposit Refer Commission:"
+                    children: "Deposit Level 3 Refer Commission:"
                 }), jsxRuntimeExports.jsxs("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: [et.deposit_refer_bonus, "%"]
+                    children: [3, "%"]
                 })]
             }),
             jsxRuntimeExports.jsxs("div", {
