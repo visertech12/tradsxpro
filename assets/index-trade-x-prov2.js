@@ -26094,24 +26094,65 @@ function Referral({setPageTitle: _e}) {
         }), jsxRuntimeExports.jsxs("div", {
             className: "bg-binance-2nd shadow-sm shadow-gray-900/30 rounded-lg p-4 mt-5",
             children: [jsxRuntimeExports.jsxs("div", {
-                className: "flex gap-2",
-                children: [jsxRuntimeExports.jsx("div", {
-                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Deposit Refer Commission:"
-                }), jsxRuntimeExports.jsxs("div", {
-                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: [et.deposit_refer_bonus, "%"]
-                })]
-            }), jsxRuntimeExports.jsxs("div", {
-                className: "flex gap-2 mt-2",
-                children: [jsxRuntimeExports.jsx("div", {
-                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
-                    children: "Trade Win Refer Commission:"
-                }), jsxRuntimeExports.jsxs("div", {
-                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
-                    children: [et.trade_refer_bonus, "%"]
-                })]
-            })]
+            className: "flex flex-col gap-1.5 border-b border-gray-800 pb-3",
+            children: [
+                // Main Header Row
+                jsxRuntimeExports.jsxs("div", {
+                    className: "flex gap-2 font-semibold",
+                    children: [
+                        jsxRuntimeExports.jsx("div", {
+                            className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto text-yellow-500",
+                            children: "Deposit Refer Commission:"
+                        }), 
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 text-yellow-500",
+                            children: [et.deposit_refer_bonus, "%"]
+                        })
+                    ]
+                }),
+                // Level 1 Breakdown
+                jsxRuntimeExports.jsxs("div", {
+                    className: "flex gap-2 pl-3 opacity-90",
+                    children: [
+                        jsxRuntimeExports.jsx("div", {
+                            className: "bg-black/30 rounded-[5px] text-[13px] py-0.5 px-2 flex-auto",
+                            children: "↳ Level 1 Commission:"
+                        }), 
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "bg-black/30 rounded-[5px] text-[13px] py-0.5 px-2",
+                            children: ["5", "%"] // Hardcoded Level 1 %
+                        })
+                    ]
+                }),
+                // Level 2 Breakdown
+                jsxRuntimeExports.jsxs("div", {
+                    className: "flex gap-2 pl-3 opacity-90",
+                    children: [
+                        jsxRuntimeExports.jsx("div", {
+                            className: "bg-black/30 rounded-[5px] text-[13px] py-0.5 px-2 flex-auto",
+                            children: "↳ Level 2 Commission:"
+                        }), 
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "bg-black/30 rounded-[5px] text-[13px] py-0.5 px-2",
+                            children: ["3", "%"] // Hardcoded Level 2 %
+                        })
+                    ]
+                }),
+                // Level 3 Breakdown
+                jsxRuntimeExports.jsxs("div", {
+                    className: "flex gap-2 pl-3 opacity-90",
+                    children: [
+                        jsxRuntimeExports.jsx("div", {
+                            className: "bg-black/30 rounded-[5px] text-[13px] py-0.5 px-2 flex-auto",
+                            children: "↳ Level 3 Commission:"
+                        }), 
+                        jsxRuntimeExports.jsxs("div", {
+                            className: "bg-black/30 rounded-[5px] text-[13px] py-0.5 px-2",
+                            children: ["1", "%"] // Hardcoded Level 3 %
+                        })
+                    ]
+                })
+            ]
         }), jsxRuntimeExports.jsxs("div", {
             className: "bg-binance-2nd shadow-sm shadow-gray-900/30 rounded-lg p-4 mt-5 mb-4",
             children: [jsxRuntimeExports.jsxs("div", {
