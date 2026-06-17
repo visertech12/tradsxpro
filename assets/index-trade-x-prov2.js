@@ -26104,7 +26104,17 @@ function Referral({setPageTitle: _e}) {
                 })]
             }), 
             jsxRuntimeExports.jsxs("div", {
-                className: "flex gap-2",
+                className: "flex gap-2 mt-2",
+                children: [jsxRuntimeExports.jsx("div", {
+                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
+                    children: "Deposit Refer Commission:"
+                }), jsxRuntimeExports.jsxs("div", {
+                    className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2",
+                    children: [et.deposit_refer_bonus, "%"]
+                })]
+            }),
+             jsxRuntimeExports.jsxs("div", {
+                className: "flex gap-2 mt-2",
                 children: [jsxRuntimeExports.jsx("div", {
                     className: "bg-black/50 rounded-[5px] text-[14px] py-1 px-2 flex-auto",
                     children: "Deposit Refer Commission:"
